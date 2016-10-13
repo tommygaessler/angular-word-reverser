@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="word-reverser">
+  <head>
+    <meta charset="utf-8">
+    <title>Angular Word Reverser</title>
+  </head>
+  <body>
+    <header>
+      <h1>Angular Word Reverser</h1>
+    </header>
+    <main>
+      <div ng-controller="reverse-word as reverse">
+        <input type="text" ng-model="word">
+        <button type="button" ng-click="word = reverse.reverse(word)">Reverse</button>
+        <p>Your word is: {{ word }}</p>
+      </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="controllers.js"></script>
+  </body>
+</html>
